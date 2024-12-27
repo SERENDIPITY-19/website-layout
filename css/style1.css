@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header header header header header"
+      "nav nav-header main main main aside"
+      "footer footer footer footer footer footer";
+    grid-template-columns: 1fr 1fr 3fr 3fr 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+  }
+  
+  /* Header */
+  .page-header {
+    grid-area: header;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .page-header form, .page-header button{
+    display: none;
+  }
+  
+  /* Nav */
+  .main-nav {
+    grid-area: nav;
+    background-color: #e9ecef;
+  }
+
+  .nav-header{
+    grid-area: nav-header;
+    background-color: #e9ecef;
+  }
+
+  .nav-header ul,
+  nav ul {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .nav-header li,
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  .nav-header li a,
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .nav-header li a:hover,
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main Content */
+  main {
+    grid-area: main;
+    background-color: #ffffff;
+  }
+  
+  main h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  main p {
+    font-size: 1.1em;
+  }
+
+  main form{
+    padding: 20px;
+  }
+  
+  /* Sidebar */
+  aside.sidebar {
+    grid-area: aside;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    grid-area: footer;
+    background-color: #dee2e6;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer section {
+    margin-top: 20px;
+  }
+  
+  footer .site-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  footer .site-links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  footer .site-links a:hover {
+    text-decoration: underline;
+  }
+  
+  footer address {
+    font-style: normal;
+  }
+  
+  footer figure {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  footer figure img {
+    max-width: 100px;
+    border-radius: 5px;
+  }
+  
+  footer figure figcaption {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  /* Forms */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #f8f9fa;
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef;
+  }
+
+  #scrollToTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #047699;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  /* Desktop View */
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr 3fr 3fr 2fr 2fr;
+      grid-template-rows: auto auto auto;
+    }
+  }
+  
+  /* Tablet View */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .grid-container {
+      grid-template-areas:
+        "header header header header"
+        "nav nav nav-header nav-header"
+        "main main main aside"
+        "footer footer footer footer";
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto auto auto;
+    }
+  
+    aside.sidebar {
+      grid-area: aside;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 767px) {
+    .grid-container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "nav-header"
+        "main"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    footer .site-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
