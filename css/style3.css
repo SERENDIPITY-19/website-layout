@@ -1,4 +1,4 @@
-/* General Styles */
+/* Base Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -23,7 +23,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #232829;
+  background-color: #1e1f3a;
   color: #fff;
   padding: 1rem;
 }
@@ -63,7 +63,7 @@ body {
 
 .main-nav {
   grid-area: nav;
-  background-color: #333;
+  background-color: #1e1f3a;
   padding: 1rem;
 }
 
@@ -176,7 +176,7 @@ footer {
       "nav main"
       "nav sidebar"
       "footer footer";
-    grid-template-columns: 0.5fr 4fr;
+    grid-template-columns: 0.25fr 5fr;
   }
   .page-header {
     flex-wrap: nowrap;
