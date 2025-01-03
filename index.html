@@ -4,147 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Layout</title>
-  <link rel="stylesheet" href="css/style4.css">
+  <link rel="stylesheet" href="css/layout4.css">
 </head>
 <body>
-  <div class="grid-container">
+  <div class="layout-wrapper">
+
     <!-- Header Section -->
     <header class="page-header">
-      <img class="site-logo" src="logo.png" alt="Website Logo">
-      <h1 class="site-title">Website Title</h1>
-      <form class="search-form" aria-label="Search Form">
-        <input type="text" placeholder="Search..." class="search-input" aria-label="Search">
-      </form>
-      <button class="login-button" aria-label="Login">Login</button>
+      <h1>Website Title</h1>
+      <ul class="header">
+        <li><a href="#">Header1</a>
+          <ul class="subheader">
+            <li><a href="#">Subheader1</a></li>
+            <li><a href="#">Subheader2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Header2</a></li>
+      </ul>
     </header>
 
     <!-- Nav Section -->
-    <header class="nav-header">
-      <ul>
-        <li class="nav-item"><a href="#">Title1</a></li>
-        <li class="nav-item"><a href="#">Title2</a></li>
-        <li class="nav-item"><a href="#">Title3</a></li>
-      </ul>
-    </header>
-    <nav class="main-nav" aria-label="Primary Navigation">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#">Home</a></li>
-        <li class="nav-item"><a href="#">About</a></li>
-        <li class="nav-item"><a href="#">Services</a></li>
-        <li class="nav-item"><a href="#">Contact</a></li>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Menu1</a>
+          <ul class="submenu">
+            <li><a href="#">Submenu1</a></li>
+            <li><a href="#">Submenu2</a></li>
+            <li><a href="#">Submenu3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
       </ul>
     </nav>
 
     <!-- Main Content Section -->
     <main>
-      <header class="main-header">
+      <header>
         <h1>Main Page Title</h1>
-        <p>Introductory text or description goes here.</p>
       </header>
 
-      <section class="primary-content">
-        <header class="section-header">
+      <section class="section">
+        <header>
           <h2>Section Title</h2>
         </header>
-        <article class="content-item">
+        <article>
           <header>
             <h3>Article Title</h3>
           </header>
-          <p>Content or summary of the article.</p>
-          <figure>
-            <img src="image.jpg" alt="Image description" loading="lazy">
-            <figcaption>Caption for the image</figcaption>
-          </figure>
-          <footer>
-            <p>Author: Pranisha Shakya | Date: Jan 1, 2024</p>
-          </footer>
         </article>
       </section>
-
-      <section class="data-section">
-        <header>
-          <h2>Data Section</h2>
-        </header>
-        <table>
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-              <th>Column 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-            <tr>
-              <td>Data 4</td>
-              <td>Data 5</td>
-              <td>Data 6</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <form class="feedback-form">
-        <fieldset>
-          <legend>Feedback Form</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Your Name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Your Email" required>
-          <label for="feedback">Feedback:</label>
-          <textarea id="feedback" placeholder="Your feedback" required></textarea>
-          <button type="submit">Submit</button>
-        </fieldset>
-      </form>
     </main>
 
     <!-- Sidebar Section -->
-    <aside class="sidebar">
-      <nav>
+    <aside>
+      <h2>Sidebar</h2>
         <ul>
-          <li><a href="#">Category 1</a></li>
-          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category1</a></li>
+          <li><a href="#">Category2</a></li>
         </ul>
-      </nav>
-      <p>Additional information or ads.</p>
     </aside>
 
     <!-- Footer Section -->
     <footer>
-      <section>
-        <header>
-          <h2>About Us</h2>
-        </header>
-        <p>Footer section with additional information.</p>
-        <nav class="site-links">
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Link1</a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
           </ul>
-        </nav>
-        <address>
-          Contact us at: <a href="mailto:repl@example.com">repl@example.com</a>
-        </address>
-        <figure>
-          <img src="certification.png" alt="Certification" loading="lazy">
-          <figcaption>REPL</figcaption>
-        </figure>
-      </section>
-      <p>&copy; 2024 All Rights Reserved</p>
     </footer>
   </div>
-  <button id="scrollToTop" aria-label="Scroll to top">⬆</button>
 
-  <script>
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
 </body>
 </html>
