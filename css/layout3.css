@@ -1,7 +1,18 @@
 /* Base Styles */
+:root{
+    --main-color: white;
+    --body-bg-color: #f5f5f5;
+    --link-default-color: black;
+    --page-header-bg-color: #155763;
+    --nav-bg-color: #147181;
+    --sidebar-bg-color: #88d0dc;
+    --footer-bg-color: #155763;
+
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: var(--body-bg-color) ;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,14 +36,14 @@ ul {
 
 li a {
     text-decoration: none;
-    color: black;
+    color: var(--link-default-color);
 }
 
 /* Header */
 .page-header {
     grid-area: header;
-    background-color: #155763;
-    color: white;
+    background-color: var(--page-header-bg-color);
+    color: var(--main-color);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -46,7 +57,7 @@ li a {
 }
 
 .header a {
-    color: white;
+    color: var(--main-color);
 }
 
 .subheader li {
@@ -56,8 +67,8 @@ li a {
 /* Nav */
 nav {
     grid-area: nav;
-    background-color: #147181;
-    color: white;
+    background-color: var(--nav-bg-color);
+    color: var(--main-color);
 }
 
 nav ul {
@@ -70,7 +81,7 @@ nav ul {
 }
 
 .menu a {
-    color: white;
+    color: var(--main-color);
     padding: 0.5rem;
 }
 
@@ -86,7 +97,7 @@ main {
 
 /* Sidebar */
 aside {
-    background-color: #88d0dc;
+    background-color: var(--sidebar-bg-color);
     ;
 }
 
@@ -98,8 +109,8 @@ aside ul {
 footer {
     grid-area: footer;
     text-align: center;
-    background-color: #155763;
-    color: white;
+    background-color: var(--footer-bg-color);
+    color: var(--main-color);
 }
 
 footer ul {
@@ -109,7 +120,7 @@ footer ul {
 }
 
 footer a {
-    color: white;
+    color: var(--main-color);
 }
 
 
@@ -126,7 +137,7 @@ footer a {
 
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .grid-container {
+    .layout-wrapper {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -134,7 +145,7 @@ footer a {
 
 /* Mobile View */
 @media (max-width: 767px) {
-    .grid-container {
+    .layout-wrapper {
         grid-template-columns: 1fr 1fr;
     }
 

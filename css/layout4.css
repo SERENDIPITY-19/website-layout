@@ -1,4 +1,13 @@
 /* Base Styles */
+:root{
+    --main-color: white;
+    --page-header-bg-color: #2c3e50;
+    --nav-bg-color: #f4f4f4;
+    --link-default-color: black;
+    --sidebar-bg-color: #f4f4f4;
+    --footer-bg-color: #2c3e50;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -23,13 +32,13 @@ ul {
 
 li a {
     text-decoration: none;
-    color: white;
+    color: var(--main-color);
 }
 
 .page-header {
     grid-area: header;
-    background: #2c3e50;
-    color: #fff;
+    background: var(--page-header-bg-color);
+    color: var(--main-color);
     padding: 20px;
 }
 
@@ -49,35 +58,35 @@ li a {
 
 nav {
     grid-area: nav;
-    background: #f4f4f4;
+    background: var(--nav-bg-color);
     padding: 20px;
     padding-left: 0;
 }
 
 nav a {
-    color: #333;
+    color: var(--link-default-color);
 }
 
 main {
     grid-area: main;
-    background: #fff;
+    background: var(--main-color);
     padding: 20px;
 }
 
 aside {
     grid-area: aside;
-    background: #f4f4f4;
+    background: var(--sidebar-bg-color);
     padding: 20px;
 }
 
 aside li a {
-    color: #333;
+    color: var(--link-default-color);
 }
 
 footer {
     grid-area: footer;
-    background: #2c3e50;
-    color: #fff;
+    background: var(--footer-bg-color);
+    color: var(--main-color);
     padding: 10px;
 }
 

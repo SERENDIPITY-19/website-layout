@@ -1,9 +1,16 @@
 /* Base Styles */
+:root {
+  --main-bg-color: #f8f9fc;
+  --main-text-color: #fff;
+  --link-default-color: black;
+  --nav-bg-color: #2e59d9;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8f9fc;
 }
 
 .layout-wrapper {
@@ -13,7 +20,7 @@ body {
     "nav main"
     "nav footer";
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: auto 5fr auto;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
@@ -23,7 +30,7 @@ ul{
 
 li a{
   text-decoration: none;
-  color: black;
+  color: var(--link-default-color);
 }
 
 .page-header {
@@ -31,9 +38,9 @@ li a{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   padding: 1rem 1rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 5px 5px 10px var(--box-shadow-color); 
   z-index: 1000;
 }
 
@@ -50,8 +57,8 @@ li a{
 
 nav {
   grid-area: nav;
-  background-color: #2e59d9;
-  color: #fff;
+  background-color: var(--nav-bg-color);
+  color: var;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -66,7 +73,7 @@ nav li{
 }
 
 nav li a{
-  color: white;
+  color: var(--main-text-color);
 }
 
 
@@ -82,7 +89,7 @@ main section {
 
 footer {
   grid-area: footer;
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   padding: 1rem;
   text-align: center;
 }
@@ -94,23 +101,25 @@ footer li{
 
 /* Desktop View */
 @media (min-width: 1024px) {
-  .grid-container {
+  .layout-wrapper {
     grid-template-areas: 
     "nav header"
     "nav main"
     "nav footer";
-    grid-template-columns: 0.5fr 5fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr auto;
   }
 }
 
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .grid-container {
+  .layout-wrapper {
     grid-template-areas: 
       "nav header"
       "nav main"
       "nav footer";
-    grid-template-columns: 0.5fr 5fr;
+      grid-template-columns: 1.25fr 4fr;
+      grid-template-rows: auto 1fr auto;
   }
 
   .page-header {
@@ -120,12 +129,13 @@ footer li{
 
 /* Mobile View */
 @media (max-width: 767px) {
-  .grid-container {
+  .layout-wrapper {
     grid-template-areas: 
       "nav header"
       "nav main"
       "nav footer";
-    grid-template-columns: 0.5fr 5fr;
+      grid-template-columns: auto 5fr;
+      grid-template-rows: auto 1fr auto;
   }
 
   .page-header {
