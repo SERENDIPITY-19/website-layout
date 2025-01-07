@@ -5,6 +5,7 @@
   --body-color: #333;
   --link-default-color: black;
   --page-header-bg-color: #232f3e;
+  --nav-bg-color: #374151;
   --footer-bg-color: rgb(218, 217, 217);
 }
 
@@ -65,7 +66,7 @@ li a{
 /* Nav */
 nav {
   grid-area: nav;
-  background-color: #374151;
+  background-color: var(--nav-bg-color);
   color: var(--main-color);
 }
 
